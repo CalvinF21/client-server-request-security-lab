@@ -1,0 +1,8 @@
+import os
+HOST = "127.0.0.1"
+PORT = int(os.getenv("LAB_PORT", "8765"))
+SHARED_SECRET = os.getenv("LAB_SHARED_SECRET", "LOCAL-ONLY-CHANGE-ME")
+TIMESTAMP_TOLERANCE_SECONDS = int(os.getenv("LAB_TIMESTAMP_TOLERANCE_SECONDS", "120"))
+NONCE_TTL_SECONDS = int(os.getenv("LAB_NONCE_TTL_SECONDS", "600"))
+MAX_BODY_BYTES = int(os.getenv("LAB_MAX_BODY_BYTES", "65536"))
+LOG_PATH = os.getenv("LAB_LOG_PATH", "logs/events.jsonl")
